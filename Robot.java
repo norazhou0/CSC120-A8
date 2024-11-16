@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Robot implements Contract {
@@ -14,15 +15,29 @@ public class Robot implements Contract {
     final double minSize = 0.5;
     final double maxSize = 5.0;
 
-    public Robot(String name, int age, String color, double size, int hand, String owner) {
+    /** 
+     * Constructor for Robot
+     * @param name of the robot
+     * @param age of the robot
+     * @param color of the robot
+     * @param size of the robot
+     * @param freeHand number of free hands of the robot
+     * @param owner of the robot
+     */
+    public Robot(String name, int age, String color, double size, int freeHand, String owner) {
         this.name = name;
         this.age = age;
         this.color = color;
         this.size = size;
-        this.freeHand = hand;
+        this.freeHand = freeHand;
         this.owner = owner;
     }
 
+
+    /** 
+     * Makes the robot grab an item if it has free hands
+     * @param item to grab
+     */
     public void grab(String item) {
         if (freeHand > 0) {
             this.freeHand -= 1;
@@ -34,7 +49,11 @@ public class Robot implements Contract {
         }
     }
 
-
+    /**
+     * Makes the robot drop an item if it is holding it
+     * @param item to drop
+     * @return the dropped item, or null if the item is not being held
+     */
     public String drop(String item) {
         if (heldItem.contains(item)) {
             this.freeHand += 1;
@@ -48,7 +67,10 @@ public class Robot implements Contract {
         }
     }
 
-
+    /**
+     * Makes the robot examine an item
+     * @param item to examine
+     */
     public void examine(String item) {
         if (this.battery >= 1) { 
             this.battery -= 1;
@@ -58,7 +80,10 @@ public class Robot implements Contract {
         }
     }
 
-
+    /**
+     * Makes the robot use an item
+     * @param item to use
+     */
     public void use(String item) {
         if (this.battery >= 2) {
             this.battery -= 2;
@@ -68,6 +93,11 @@ public class Robot implements Contract {
         }
     }
 
+    /**
+     * Makes the robot walk in a specified direction
+     * @param direction to walk
+     * @return true if the robot successfully walked, false otherwise
+     */
     public boolean walk(String direction) {
         if (this.battery >= 2) {
             this.battery -= 2;
@@ -79,6 +109,12 @@ public class Robot implements Contract {
         }
     }
 
+    /**
+     * Makes the robot fly for a given number of rounds and minutes
+     * @param rounds  the number of rounds to fly
+     * @param minutes the number of minutes to fly
+     * @return true if the robot successfully flew, false otherwise
+     */
     public boolean fly(int rounds, int minutes) {
         if (rounds < 0 || minutes < 0) {
             System.out.println("Rounds and minutes cannot be negative.");
@@ -95,6 +131,11 @@ public class Robot implements Contract {
         }
     }
 
+
+    /**
+     * Makes the robot shrink to half its size if possible
+     * @return the new size of the robot
+     */
     public Number shrink() {
         if (this.size / 2 >= minSize && this.battery >= 2) { 
             this.size /= 2;
@@ -109,6 +150,10 @@ public class Robot implements Contract {
         return this.size;
     }
 
+     /**
+     * Makes the robot grow to twice its size if possible
+     * @return the new size of the robot
+     */
     public Number grow() {
         if (this.size * 2 <= maxSize && this.battery >= 2) {
             this.size *= 2;
@@ -122,6 +167,9 @@ public class Robot implements Contract {
         return this.size;
     }
 
+    /**
+     * Recharges the robot's battery to full capacity
+     */
     public void rest() {
         if (this.battery < 100) {
             this.battery = 100;
@@ -131,10 +179,17 @@ public class Robot implements Contract {
         }
     }
 
+    /**
+     * Throws an exception when undo is called
+     */
     public void undo() {
         throw new RuntimeException("Cannot undo!");
     }
 
+    /**
+     * Returns a string with the robot's status
+     * @return a string containing the robot's information
+     */
     public String toString() {
         return "- name: " + name + "\n" + "- age: " + age + "\n" + "- color:" + color + "\n"  + "- size: " + size + "\n"  + "- freeHand:" + freeHand + "\n" 
                 + "- owner: " + owner + "\n"  + "- battery: " + battery + "%";

@@ -10,38 +10,38 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ## Assignment Points:
 
-_____ 10 pts: The class meaningfully implements each of the methods in described in the `Contract` interface:
+_Yes____ 10 pts: The class meaningfully implements each of the methods in described in the `Contract` interface:
 
-      _____ `void grab(String item);`
-      _____ `String drop(String item);`
-      _____ `void examine(String item);`
-      _____ `void use(String item);`
-      _____ `boolean walk(String direction);`
-      _____ `boolean fly(int x, int y);`
-      _____ `Number shrink();`
-      _____ `Number grow();`
-      _____ `void rest();`
-      _____ `void undo();`
+      _Yes____ `void grab(String item);`
+      _Yes____ `String drop(String item);`
+      _Yes____ `void examine(String item);`
+      _Yes____ `void use(String item);`
+      _Yes____ `boolean walk(String direction);`
+      _Yes____ `boolean fly(int x, int y);`
+      _Yes____ `Number shrink();`
+      _Yes____ `Number grow();`
+      _Yes____ `void rest();`
+      _Yes____ `void undo();`
 
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+_Yes____ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+_Yes____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+_Yes____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      _Yes____ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      _Yes____ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      _Yes____ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      _Yes____ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      _Yes____ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed `rubric.md` file)
+_Yes____ 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment, **including a detailed description of the class you implemented and what it does**
+_Yes____ 1 pt: `reflection.md` contains your reflection on the assignment, **including a detailed description of the class you implemented and what it does**
