@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class Robot implements Contract {
 
-    String name;
-    int age;
-    String color;
-    double size;
-    int freeHand;
-    String owner;
-    int battery = 100;
-    ArrayList<String> heldItem = new ArrayList<>();
+    private String name;
+    private int age;
+    private String color;
+    private double size;
+    private int freeHand;
+    private String owner;
+    private int battery = 100;
+    private ArrayList<String> heldItem = new ArrayList<>();
 
     final double minSize = 0.5;
     final double maxSize = 5.0;
