@@ -196,21 +196,21 @@ public class Robot implements Contract {
     }
 
     public static void main(String[] args) {
-        Robot Annie = new Robot("Annie", 3, "blue", 1.5, 2, "Nora");
-        System.out.println(Annie);
-        Annie.grab("toy");
-        Annie.drop("toy");
-        Annie.drop("toy");
-        Annie.examine("desk");
-        Annie.use("fridge");
-        Annie.walk("north");
-        Annie.shrink();
-        Annie.shrink();
-        Annie.grow();
-        Annie.grow();
-        Annie.grow();
-        Annie.fly(3, 10);
-        Annie.rest();
-        Annie.rest();
+        Robot annie = new Robot("Annie", 3, "blue", 1.5, 2, "Nora");
+        System.out.println(annie);
+        annie.grab("toy");
+        annie.drop("toy");
+        annie.drop("toy");
+        annie.examine("desk");
+        annie.use("fridge");
+        annie.walk("north");
+        annie.shrink();
+        annie.shrink();
+        annie.grow();
+        annie.grow();
+        annie.grow();
+        annie.fly(3, 10);
+        annie.rest();
+        annie.rest();
     }
 }
